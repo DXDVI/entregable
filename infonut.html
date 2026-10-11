@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/barranav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/informacion.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <!-- Logotipo oficial fijo a la izquierda -->
+        <div class="logo">
+            <img src="img/pngwing.com (14).png" alt="Little Caesars">
+        </div>
+        
+        <!-- Lista de opciones con su ID id="nav-menu" -->
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+        </ul>
+
+        <!-- Botón de texto plano Neo-brutalista con ID id="menu-toggle" -->
+        <button class="menu-text-btn" id="menu-toggle" aria-label="Abrir menú">
+            MENÚ
+        </button>
+    </nav>
+</header>
+
+<!-- SCRIPT COMPACTO EXCLUSIVO (Añádelo justo aquí debajo para que funcione al instante) -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('active');
+    });
+</script>
+
+
+
+    <main class="imagen">
+        <div class="img">
+        <img src="archivo AVIF/tabla nutricional.avif" alt="tabla-nutricional">
+        </div>
+    </main>
+
+
+    <footer class="footer-container">
+        <div class="footer-top-row">
+            <div class="footer-links">
+                <a href="terandcon.html">TÉRMINOS Y CONDICIONES</a>
+                <span class="separator">|</span>
+                <a href="infonut.html">INFORMACIÓN NUTRICIONAL</a>
+                <span class="separator">|</span>
+                <a href="queja.html">LIBRO DE RECLAMACIONES</a>
+            </div>
+            <div class="footer-socials">
+                <span>VISITA NUESTRAS REDES SOCIALES</span>
+                <a href="https://www.facebook.com/LittleCaesarsPE" class="social-icon">f</a>
+                <a href="https://www.instagram.com/littlecaesarsperu/?hl=es-la" class="social-icon">📷</a>
+            </div>
+        </div>
+        <div class="footer-legal-text">
+            <p>©2013-2026 Little Caesar Enterprises, Inc. Reservados todos los derechos.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

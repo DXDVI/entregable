@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales - Little Caesars</title>
+
+    <link rel="stylesheet" href="css/barranav.css">
+    <link rel="stylesheet" href="css/sucursales.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/pngwing.com (14).png" alt="Little Caesars">
+        </div>
+        
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+        </ul>
+
+        <button class="menu-text-btn" id="menu-toggle" aria-label="Abrir menú">
+            MENÚ
+        </button>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('active');
+    });
+</script>
+
+
+    
+    <header class="branches-header">
+        <h1>Encuentra tu Sucursal</h1>
+        <p class="tagline">¡Pizzas listas cuando tú llegues!</p>
+    </header>
+
+    <main class="branches-container">
+        
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Introduce tu ciudad o código postal...">
+                <button id="search-btn" class="search-btn">Buscar Tienda</button>
+            </div>
+        </section>
+
+        <section class="branches-grid" id="branches-list">
+            
+            <article class="branch-card" data-id="1" data-city="centro" data-open="11:00" data-close="22:00">
+                <div class="branch-status"><span>Evaluando...</span></div>
+                <div class="branch-info">
+                    <h3 class="branch-name">Little Caesars - Plaza Central</h3>
+                    <p class="branch-detail">📍 Av. Principal #456, Colonia Centro</p>
+                    <p class="branch-detail">🕒 Horario: 11:00 AM - 10:00 PM</p>
+                    <p class="branch-detail">📞 Tel: (555) 123-4567</p>
+                    
+                    <div class="branch-services">
+                        <span class="service-badge">🚗 Auto-Caesar (Drive-Thru)</span>
+                        <span class="service-badge">🪑 Comedor</span>
+                    </div>
+                    
+                    <div class="branch-actions" style="display: flex; gap: 10px; margin-top: auto;">
+                        <button class="select-branch-btn" style="flex: 1; background-color: #FF6600; color: white; border: 2px solid #222; padding: 0.6rem; border-radius: 6px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.85rem; box-shadow: 2px 2px 0px #222;">Seleccionar</button>
+                        <a href="https://google.com" target="_blank" class="map-link-btn" style="flex: 1; margin-top: 0;">Cómo llegar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="branch-card" data-id="2" data-city="norte" data-open="11:00" data-close="23:00">
+                <div class="branch-status"><span>Evaluando...</span></div>
+                <div class="branch-info">
+                    <h3 class="branch-name">Little Caesars - Norte Norte</h3>
+                    <p class="branch-detail">📍 Blv. de los Héroes #890, Zona Norte</p>
+                    <p class="branch-detail">🕒 Horario: 11:00 AM - 11:00 PM</p>
+                    <p class="branch-detail">📞 Tel: (555) 765-4321</p>
+                    
+                    <div class="branch-services">
+                        <span class="service-badge">🚗 Auto-Caesar (Drive-Thru)</span>
+                    </div>
+                    
+                    <div class="branch-actions" style="display: flex; gap: 10px; margin-top: auto;">
+                        <button class="select-branch-btn" style="flex: 1; background-color: #FF6600; color: white; border: 2px solid #222; padding: 0.6rem; border-radius: 6px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.85rem; box-shadow: 2px 2px 0px #222;">Seleccionar</button>
+                        <a href="https://google.com" target="_blank" class="map-link-btn" style="flex: 1; margin-top: 0;">Cómo llegar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="branch-card" data-id="3" data-city="sur" data-open="12:00" data-close="21:00">
+                <div class="branch-status"><span>Evaluando...</span></div>
+                <div class="branch-info">
+                    <h3 class="branch-name">Little Caesars - Portal Sur</h3>
+                    <p class="branch-detail">📍 Calzada del Sol #112, Plaza Portal Sur</p>
+                    <p class="branch-detail">🕒 Horario: 12:00 PM - 09:00 PM</p>
+                    <p class="branch-detail">📞 Tel: (555) 456-7890</p>
+                    
+                    <div class="branch-services">
+                        <span class="service-badge">🪑 Comedor</span>
+                    </div>
+                    
+                    <div class="branch-actions" style="display: flex; gap: 10px; margin-top: auto;">
+                        <button class="select-branch-btn" style="flex: 1; background-color: #FF6600; color: white; border: 2px solid #222; padding: 0.6rem; border-radius: 6px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.85rem; box-shadow: 2px 2px 0px #222;">Seleccionar</button>
+                        <a href="https://google.com" target="_blank" class="map-link-btn" style="flex: 1; margin-top: 0;">Cómo llegar</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+        <footer class="footer-container">
+        <div class="footer-top-row">
+            <div class="footer-links">
+                <a href="terandcon.html">TÉRMINOS Y CONDICIONES</a>
+                <span class="separator">|</span>
+                <a href="infonut.html">INFORMACIÓN NUTRICIONAL</a>
+                <span class="separator">|</span>
+                <a href="queja.html">LIBRO DE RECLAMACIONES</a>
+            </div>
+
+            <div class="footer-socials">
+                <span>VISITA NUESTRAS REDES SOCIALES</span>
+                <a href="https://www.facebook.com/LittleCaesarsPE" class="social-icon">f</a>
+                <a href="https://www.instagram.com/littlecaesarsperu/?hl=es-la" class="social-icon">📷</a>
+            </div>
+        </div>
+
+        <div class="footer-legal-text">
+            <p>©2013-2026 Little Caesar Enterprises, Inc. Reservados todos los derechos. La marca y los logotipos de
+                Little Caesars® Pizza y sus marcas relacionadas son marcas comerciales registradas de Little Caesar
+                Enterprises, Inc.</p>
+            <p>Disponible en tiendas participantes. Los precios pueden variar si se compra a través de servicios de
+                delivery de terceros e incluyen cargos adicionales.</p>
+        </div>
+    </footer>
+
+    <!-- Archivo JS separado -->
+    <script src="javascript/sucucrsascr.js" defer></script>
+</body>
+</html>

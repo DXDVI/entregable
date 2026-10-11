@@ -1,0 +1,19 @@
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.imagen .img {
+    width: 100%;
+    max-width: 900px;
+}
+
+.imagen .img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

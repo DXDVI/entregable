@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="css/barranav.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/pngwing.com (14).png" alt="Little Caesars">
+            </div>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            </ul>
+
+            <button class="menu-text-btn" id="menu-toggle" aria-label="Abrir menú">
+                MENÚ
+            </button>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+    </script>
+
+
+    <!-- BANNER 1: CRAZY PUFF -->
+    <section class="princ">
+        <img class="banner-img" src="archivo AVIF/icoos/1719353447-800x534_homebanner_cp2.avif"
+            alt="Crazy Puffs Little Caesars">
+
+        <div class="banner-info">
+            <div class="precio-contenedor">
+                <span class="valor">S/</span>
+                <span class="soles">9</span>
+                <span class="cent">.90</span>
+            </div>
+
+            <h2 class="titulo-pizza">
+                <span class="text0">Hot-n-Ready</span>
+                <span class="text1">CRAZY PUFF</span>
+            </h2>
+
+            <p class="text2">4 DELICIOSAS PORCIONES RELLENAS DE PEPPERONI Y QUESO</p>
+        </div>
+    </section>
+
+    <!-- BANNER 2: DÚO!DÚO! -->
+    <section class="princ">
+        <img class="banner-img" src="archivo AVIF/icoos/1785188566-duo-duo_julienne_lac_orshadow_rgb.avif">
+
+        <div class="banner-info">
+            <div class="precio-contenedor">
+                <span class="valor">S/</span>
+                <span class="soles">26</span>
+                <span class="cent">.90</span>
+            </div>
+            <div>
+                <h2 class="titulo-pizza">
+                    <span class="text0">Hot-n-Ready</span>
+                    <span class="text1">DÚO!DÚO!</span>
+                </h2>
+                <p class="text2">2 sabores y 2 bordes</p>
+            </div> <!-- ¡CORREGIDO! Cerramos la etiqueta div que faltaba -->
+        </div>
+    </section>
+
+    <!-- SECCIÓN INGREDIENTES Y PUBLICIDAD UNIFICADA -->
+    <section class="seccion-promocional-completa">
+
+        <!-- Bloque de Ingredientes Izquierdo -->
+        <div class="ingredientes-seccion">
+            <article class="ingrediente-tarjeta">
+                <img src="archivo AVIF/icoos/1656619996-site_newcheesethrow_550x370.avif" alt="Ilustración de queso"
+                    class="ingrediente-img">
+                <h2 class="ingrediente-titulo">QUESO</h2>
+                <p class="ingrediente-desc">nuestra mezcla emblemática</p>
+            </article>
+
+            <article class="ingrediente-tarjeta">
+                <img src="archivo AVIF/icoos/1656620003-site_newdoughball_550x370.avif" alt="Ilustración de masa"
+                    class="ingrediente-img">
+                <h2 class="ingrediente-titulo">MASA</h2>
+                <p class="ingrediente-desc">fresca hecha todos los días</p>
+            </article>
+
+            <article class="ingrediente-tarjeta">
+                <img src="archivo AVIF/icoos/1599762672-caesar-man-tomato-weights.avif" alt="Ilustración de salsa"
+                    class="ingrediente-img">
+                <h2 class="ingrediente-titulo">SALSA</h2>
+                <p class="ingrediente-desc">hecha con tomates maduros de la huerta</p>
+            </article>
+        </div>
+
+        <!-- Bloque Publicitario Hot-N-Ready Derecho -->
+        <div class="tarjeta-hot-ready">
+            <h2 class="titulo-script">Hot-N-Ready</h2>
+            <h3 class="titulo-principal">
+                LA PIZZA RECIÉN HECHA SALIDA DEL HORNO CUANDO ENTRAS.
+                <span>SIN LLAMAR. SIN ESPERAR.</span>
+            </h3>
+
+            <div class="contenedor-personaje">
+                <img src="archivo AVIF/icoos/1599765329-caesar-man-with-pizza_28866502.avif"
+                    alt="Personaje Little Caesars" class="personaje-img">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer-container">
+        <!-- Fila Superior: Enlaces y Redes Sociales -->
+        <div class="footer-top-row">
+            <!-- Enlaces legales -->
+            <div class="footer-links">
+                <a href="terandcon.html">TÉRMINOS Y CONDICIONES</a>
+                <span class="separator">|</span>
+                <a href="infonut.html">INFORMACIÓN NUTRICIONAL</a>
+                <span class="separator">|</span>
+                <a href="queja.html">LIBRO DE RECLAMACIONES</a>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-socials">
+                <span>VISITA NUESTRAS REDES SOCIALES</span>
+                <a href="https://www.facebook.com/LittleCaesarsPE" class="social-icon">f</a>
+                <a href="https://www.instagram.com/littlecaesarsperu/?hl=es-la" class="social-icon">📷</a>
+            </div>
+        </div>
+
+        <!-- Fila Inferior: Texto legal (Más pequeño y abajo) -->
+        <div class="footer-legal-text">
+            <p>©2013-2026 Little Caesar Enterprises, Inc. Reservados todos los derechos. La marca y los logotipos de
+                Little Caesars® Pizza y sus marcas relacionadas son marcas comerciales registradas de Little Caesar
+                Enterprises, Inc.</p>
+            <p>Disponible en tiendas participantes. Los precios pueden variar si se compra a través de servicios de
+                delivery de terceros e incluyen cargos adicionales.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

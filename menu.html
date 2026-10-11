@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Little Caesars</title>
+
+    <!-- Tus hojas de estilo existentes -->
+    <link rel="stylesheet" href="css/barranav.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- Tu Barra de Navegación Existente (Modificada con el botón del carrito) -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/pngwing.com (14).png" alt="Logo">
+        </div>
+        
+        <!-- Enlaces de navegación (Se ocultarán en el menú desplegable en celular) -->
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+        </ul>
+
+        <!-- CONTENEDOR DE ACCIONES (El carrito se queda igual y agregamos el botón a su derecha) -->
+        <div class="navbar-actions">
+            <!-- Botón del carrito integrado en tu barra -->
+            <button id="cart-toggle-btn" class="cart-icon-btn">
+                🛒 <span id="cart-counter">0</span>
+            </button>
+
+            <!-- NUEVO: Botón MENÚ posicionado exactamente a la derecha del carrito -->
+            <button class="menu-text-btn" id="menu-toggle" aria-label="Abrir menú">
+                MENÚ
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Script para el funcionamiento interactivo del despliegue -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('active');
+    });
+</script>
+
+            
+            <!-- Botón de tu propio icono de menú personalizado -->
+            <button class="menu-icon-btn" id="menu-toggle" aria-label="Abrir menú">
+                <!-- Reemplaza la ruta por tu imagen o SVG de menú -->
+                <img src="img/mi-icono-menu.png" alt="Menú" class="custom-menu-icon" onerror="this.src='https://icons8.com'">
+            </button>
+        </div>
+    </nav>
+</header>
+
+    
+    <!-- Encabezado del Menú -->
+    <header class="menu-header">
+        <h1>Little Caesars</h1>
+        <p class="tagline">¡PIZZA! ¡PIZZA!</p>
+    </header>
+
+    <!-- Contenedor Principal Adaptado -->
+    <main class="main-layout">
+        
+        <!-- Catálogo del Menú -->
+        <section class="menu-container">
+            
+            <!-- Sección de Pizzas -->
+            <section class="menu-section">
+                <h2 class="section-title">Pizzas Favoritas</h2>
+                <div class="pizza-grid">
+                    
+                    <!-- Pizza 1 -->
+                    <article class="pizza-card" data-id="p1" data-name="Pepperoni" data-price="7.99">
+                        <div class="pizza-image" style="background-color: #FFE6CC;"><img src="archivo AVIF/1673912117-1584717259-cl-pizza-super-cheese-14in.avif" alt=""></div>
+                        <div class="pizza-info">
+                            <div><span class="badge-hot">HOT-N-READY®</span></div>
+                            <h3 class="pizza-name">Pepperoni</h3>
+                            <p class="pizza-description">Deliciosa pizza clásica cubierta con una generosa capa de queso mozzarella derretido y abundante pepperoni fresco.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">$7.99</span>
+                                <button class="order-btn add-to-cart-btn">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pizza 2 -->
+                    <article class="pizza-card" data-id="p2" data-name="Solo Queso" data-price="6.99">
+                        <div class="pizza-image" style="background-color: #FFF0D4;"><img src="archivo AVIF/1600451241-cl-pizza-cheese.avif"></div>
+                        <div class="pizza-info">
+                            <div><span class="badge-hot">HOT-N-READY®</span></div>
+                            <h3 class="pizza-name">Solo Queso</h3>
+                            <p class="pizza-description">Para los amantes de lo simple: nuestra masa tradicional con salsa de tomate especial y un combo de quesos premium.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">$6.69</span>
+                                <button class="order-btn add-to-cart-btn">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pizza 3 -->
+                    <article class="pizza-card" data-id="p3" data-name="Ultimate Supreme" data-price="10.99">
+                        <div class="pizza-image" style="background-color: #FFE6D5;"><img src="archivo AVIF/1600451956-cl-pizza-3-meat-treat.avif" alt=""></div>
+                        <div class="pizza-info">
+                            <h3 class="pizza-name">Ultimate Supreme</h3>
+                            <p class="pizza-description">Cargada con pepperoni, salchicha italiana, champiñones, pimientos verdes y cebollas frescas.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">$10.99</span>
+                                <button class="order-btn add-to-cart-btn">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Sección de Acompañamientos -->
+            <section class="menu-section">
+                <h2 class="section-title">Complementos</h2>
+                <div class="pizza-grid">
+                    
+                    <!-- Complemento 1 -->
+                    <article class="pizza-card" data-id="c1" data-name="Crazy Bread®" data-price="3.49">
+                        <div class="pizza-image" style="background-color: #FFF3CD;"><img src="archivo AVIF/1775676257-crazy_bread_4pc_ov_orshadow_cmyk_camb-1.avif" alt=""></div>
+                        <div class="pizza-info">
+                            <div><span class="badge-hot">HOT-N-READY®</span></div>
+                            <h3 class="pizza-name">Crazy Bread®</h3>
+                            <p class="pizza-description">Cuatro palitroques de pan suave con mantequilla de ajo y queso parmesano espolvoreado.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">$3.49</span>
+                                <button class="order-btn add-to-cart-btn">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Complemento 2 -->
+                    <article class="pizza-card" data-id="c2" data-name="Crazy chesse bread" data-price="6.99">
+                        <div class="pizza-image" style="background-color: #F8D7DA;"><img src="archivo AVIF/1657575066-microsoftteams-image-10.avif" alt=""></div>
+                        <div class="pizza-info">
+                            <h3 class="pizza-name">Pan de queso Caesars</h3>
+                            <p class="pizza-description">12 pancitos recién horneados, puede ser de queso, pepperoni o bacon</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">$6.99</span>
+                                <button class="order-btn add-to-cart-btn">Pedir</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Panel Lateral del Carrito Escondido/Desplegable -->
+        <aside id="shopping-cart" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Pedido</h2>
+                <button id="close-cart-btn" class="close-btn">&times;</button>
+            </div>
+            
+            <div id="cart-items-container" class="cart-items">
+                <p class="empty-message">Inicia su orden.</p>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="total-container">
+                    <span>Total:</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" disabled>Confirmar Orden</button>
+            </div>
+        </aside>
+
+    </main>
+
+        <footer class="footer-container">
+        <!-- Fila Superior: Enlaces y Redes Sociales -->
+        <div class="footer-top-row">
+            <!-- Enlaces legales -->
+            <div class="footer-links">
+                <a href="terandcon.html">TÉRMINOS Y CONDICIONES</a>
+                <span class="separator">|</span>
+                <a href="infonut.html">INFORMACIÓN NUTRICIONAL</a>
+                <span class="separator">|</span>
+                <a href="queja.html">LIBRO DE RECLAMACIONES</a>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer-socials">
+                <span>VISITA NUESTRAS REDES SOCIALES</span>
+                <a href="https://www.facebook.com/LittleCaesarsPE" class="social-icon">f</a>
+                <a href="https://www.instagram.com/littlecaesarsperu/?hl=es-la" class="social-icon">📷</a>
+            </div>
+        </div>
+
+        <!-- Fila Inferior: Texto legal (Más pequeño y abajo) -->
+        <div class="footer-legal-text">
+            <p>©2013-2026 Little Caesar Enterprises, Inc. Reservados todos los derechos. La marca y los logotipos de
+                Little Caesars® Pizza y sus marcas relacionadas son marcas comerciales registradas de Little Caesar
+                Enterprises, Inc.</p>
+            <p>Disponible en tiendas participantes. Los precios pueden variar si se compra a través de servicios de
+                delivery de terceros e incluyen cargos adicionales.</p>
+        </div>
+    </footer>
+
+    <!-- Inclusión de tu JavaScript Modular -->
+    <script src="javascript/menuscr.js"></script>
+</body>
+</html>

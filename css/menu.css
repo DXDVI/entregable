@@ -1,0 +1,308 @@
+/* --- VARIABLES --- */
+:root {
+  --orange-primary: #FF6600;
+  --orange-dark: #E05500;
+  --dark-charcoal: #222222;
+  --light-gray: #F8F9FA;
+  --white: #FFFFFF;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--dark-charcoal);
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- ENCABEZADO DEL MENÚ --- */
+.menu-header {
+  background-color: var(--orange-primary);
+  color: var(--white);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 8px solid var(--dark-charcoal);
+}
+
+.menu-header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0px var(--dark-charcoal);
+}
+
+.tagline {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  background: var(--dark-charcoal);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+/* Botón del Carrito en el Nav */
+.cart-icon-btn {
+  background: var(--dark-charcoal);
+  color: var(--white);
+  border: 2px solid var(--orange-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#cart-counter {
+  background: var(--orange-primary);
+  padding: 0.1rem 0.4rem;
+  border-radius: 50%;
+  font-size: 0.85rem;
+}
+
+/* --- DISEÑO ESTRUCTURAL DE DISEÑO (FLEX/GRID) --- */
+.main-layout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu-container {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.menu-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--dark-charcoal);
+  border-bottom: 4px solid var(--orange-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* --- TARJETAS --- */
+.pizza-card {
+  background-color: var(--white);
+  border: 3px solid var(--dark-charcoal);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 5px 5px 0px var(--dark-charcoal);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 9px 9px 0px var(--dark-charcoal);
+}
+
+.pizza-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-bottom: 3px solid var(--dark-charcoal);
+}
+
+.pizza-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pizza-name {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--orange-primary);
+}
+
+.pizza-description {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.pizza-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-price {
+  font-size: 1.6rem;
+}
+
+.order-btn {
+  background-color: var(--orange-primary);
+  color: var(--white);
+  border: 2px solid var(--dark-charcoal);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--dark-charcoal);
+}
+
+.order-btn:hover {
+  background-color: var(--orange-dark);
+}
+
+.badge-hot {
+  background-color: #FFCC00;
+  color: var(--dark-charcoal);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--dark-charcoal);
+}
+
+/* --- PANEL LATERAL DEL CARRITO (SIDEBAR) --- */
+.cart-sidebar {
+  width: 350px;
+  background-color: var(--white);
+  border-left: 5px solid var(--dark-charcoal);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--dark-charcoal);
+  padding-bottom: 1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0;
+}
+
+.empty-message {
+  font-family: 'Arial', sans-serif;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.cart-item-info h4 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.cart-item-info span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.remove-item-btn {
+  background: #FF4444;
+  color: white;
+  border: 1px solid var(--dark-charcoal);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.cart-footer {
+  border-top: 3px solid var(--dark-charcoal);
+  padding-top: 1rem;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: #28A745;
+  color: white;
+  border: 3px solid var(--dark-charcoal);
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px var(--dark-charcoal);
+}
+
+.checkout-btn:disabled {
+  background-color: #CCC;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 992px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    z-index: 2000;
+    transform: translateX(100%);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+  }
+  .cart-sidebar.active {
+    transform: translateX(0);
+  }
+  .close-btn {
+    display: block;
+  }
+}
